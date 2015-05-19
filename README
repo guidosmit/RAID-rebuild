@@ -1,0 +1,5 @@
+This project aims to help with rebuilding RAID5 volumes from disk images, even if all parameters were lost.
+It still needs some knowledge on how to interpret analysis output and edit the volume parser.
+More improvements will follow in the future, so please regard this as a Proof-of-Concept.
+If you need any help in using the scripts, please drop me an email at: 0xd020@gmail.com.
+
