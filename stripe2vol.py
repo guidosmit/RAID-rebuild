@@ -15,7 +15,17 @@ disk.append('DISK4.dd')
 disk.append('DISK5.dd')
 
 # This is the datablock ordering reference table. 0 marks new stripe
-datablocks=[1,2,3,4,0,5,1,2,3,0,4,5,1,2,0,3,4,5,1,0,2,3,4,5,0]
+datablocks=[1,2,3,4,0,5,1,2,3,0,4,5,1,2,0,3,4,5,1,0,2,3,4,5,0]   #  Left synchronous 5 disk
+
+######## Use one of the following orders for Left async/sync layouts:  ################
+#datablocks=[1,2,3,4,0,1,2,3,5,0,1,2,4,5,0,1,3,4,5,0,2,3,4,5,0]   #  Left Asynchronous 5 disk
+
+#datablocks=[1,2,3,0,4,1,2,0,3,4,1,0,2,3,4,0]  #  Left synchronous 4 disk
+#datablocks=[1,2,3,0,1,2,4,0,1,3,4,0,2,3,4,0]  #  Left Asynchronous 4 disk
+
+#datablocks=[1,2,0,1,3,0,2,3,0]   #  Left Synchronous 3 disk
+#datablocks=[1,2,0,1,3,0,2,3,0]   #  Left Asynchronous 3 disk
+#######################################################################################
 
 # change stripe size here
 stripesize=128*512
